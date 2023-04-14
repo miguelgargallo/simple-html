@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mi página web</title>
+    <style>
+      /* Estilos CSS para el body en modo día */
+      .day {
+        background-color: #f1f1f1;
+        color: #333;
+      }
+
+      /* Estilos CSS para el body en modo noche */
+      .night {
+        background-color: #333;
+        color: #f1f1f1;
+      }
+    </style>
+  </head>
+  <body class="day">
+    <h1>Bienvenido a mi página web</h1>
+    <p>Esta es una página web de ejemplo.</p>
+    <!-- Agregamos un botón -->
+    <button id="miBoton">Presionar aquí</button>
+
+    <!-- Agregamos el enlace CDN de jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Agregamos nuestro script de jQuery -->
+    <script>
+      $(document).ready(function() {
+        $("#miBoton").click(function() {
+          $("body").toggleClass("night");
+        });
+      });
+    </script>
+  </body>
+</html>
